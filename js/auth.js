@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
         if (result.status == 200) {
             document.querySelector(".auth").style.display = "none";
             document.getElementById("contenu").style.display = "grid";
+            document.getElementById("title").style.display = "block";
         }
         
     }
@@ -62,7 +63,6 @@ function displayPage() {
     setTimeout(() => {
         document.querySelector(".loader").style.display = "none";
         document.querySelector(".main").style.display = "flex";
-        document.querySelector(".title").style.display = "block";
     }, 1500)
 }
 

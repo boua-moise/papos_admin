@@ -6,6 +6,10 @@ div#contenu{
     row-gap: 50px;
 }
 
+h1#title{
+    display: none;
+}
+
 header {
     display: flex;
     justify-content: space-between;
