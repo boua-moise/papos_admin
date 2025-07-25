@@ -62,6 +62,7 @@ function displayPage() {
     setTimeout(() => {
         document.querySelector(".loader").style.display = "none";
         document.querySelector(".main").style.display = "flex";
+        document.querySelector(".title").style.display = "block";
     }, 1500)
 }
 
