@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/update.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+</head>
+<body>
+    <div class="main">
+
+        <header>
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" class="logo" alt="logo"> Les Papos</div></a>
+            <nav>
+                <a href="../index.html">Accueil</a>
+                <a href="addArticle.html"  class="add">Ajout</a>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <h1>Ajout d'article</h1>
+            <form method="post">
+                <label for="blog-title">Titre du blog</label>
+                <input type="text" id="blog-title" name="blog-title" required>
+                <label for="blog-description">Description du blog</label>
+                <input type="text" id="blog-description" name="blog-description" required>
+                <label for="category">Catégorie</label>
+                <select name="category" id="category" required>
+                    <option value="systeme">Systeme</option>
+                    <option value="reseau">Réseau</option>
+                    <option value="cybersecurity">Cybersécurité</option>
+                    <option value="programmation">Programmation</option>
+                    <option value="ia">IA</option>
+                </select>
+                <label for="image"></label>
+                <input type="file" name="image" id="image" required>
+                <label for="editorjs">contenu</label>
+                <div id="editorjs" name="content" rows="10"></div>
+                <div class="btn">
+                    <button type="submit">ENVOYER</button>
+                </div>
+            </form>
+            </div>
+        </main>
+        <footer>
+            <p>© Copyright 2025. All Rights Reserved. Designed & Developed by Hack3</p>
+        </footer>
+
+    </div>
+
+    <div class="loader">
+        <h1>LOADING</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+    <script src="../js/addArticles.js"></script>
+</body> 
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/auth.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+
+    <div class="main">
+
+        <header>
+            <a href="index.html"><div class="logo"><img src="images/logo.png" class="logo" alt="logo"> Les Papos</div></a>
+            <nav>
+                <a href="index.html" class="accueil">Accueil</a>
+                <a href="pages/addArticle.html">Ajout</a>
+            </nav>
+        </header>
+
+        <main>
+
+            <div class="auth">
+                <h1>Connexion</h1>
+
+                <form method="post">
+
+                    <div class="content-form">
+
+                        <div class="champ-form">
+                            <label for="mail">mail</label><br>
+                            <input type="email" name="mail" id="mail" required>
+                        </div>
+
+                        <div class="champ-form">
+                            <label for="password">mot de pass</label><br>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+
+                    </div>
+
+                    <button class="cta auth-cta">Connexion</button>
+
+                    <em class="forget"><b>mot de pass oublié?</b></em>
+                    
+                </form>
+            </div>
+            <h1>Liste des Articles</h1>
+            <div id="contenu">
+
+
+                <!-- <div class="content-article">
+                    <div class="img-article">
+                        <img src="" alt="image-blog">
+                    </div>
+
+                    <div class="domaine-article">
+                        
+                    </div>
+
+                    <div class="titre_info-article">
+                        <h3 class="titre-article"></h3>
+                        <p class="info-article"></p>
+                    </div>
+                    <div class="content-cta">
+                        <div class="cta update">mise à jour</div>
+                        <div class="cta delete">supprimer</div>
+                    </div>
+                </div> -->
+            </div>
+ 
+        </main>
+        
+
+        <footer>
+            <p>© Copyright 2025. All Rights Reserved. Designed & Developed by Hack3</p>
+        </footer>
+
+    </div>
+
+
+    <div class="loader">
+        <h1>LOADING</h1>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+div.auth{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    margin-top: 1em;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+
+.champ-form{
+    margin-bottom: 30px;
+}
+
+.champ-form input{
+    width: 400px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding-top: 15px;
+    border: none;
+    border-bottom: 1.7px solid #000;
+    color: #000037;
+    outline: none;
+    background-color: transparent;
+}
+
+.champ-form select{
+    width: 100%;
+    font-size: 1.2em;
+    margin-top: 24px;
+    border: none;
+    border-bottom: 1.7px solid #000;
+    color: #000037;
+    outline: none;
+    background-color: transparent;
+}
+
+.auth-cta{
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+}
+
+.cta:hover{
+    cursor: pointer;
+}
+
+.forget{
+    margin: 10px 0;
+}
+
+p{
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 10px;
+}
