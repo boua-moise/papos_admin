@@ -12,7 +12,6 @@ async function getAllCours(token) {
     if (result.status == 200) {
         const contenuHtml = document.getElementById("contenu");
         const data = await result.json();
-        console.log(data.article);
 
         for (let index = 0; index < data.article.length; index++) {
             const element = data.article[index];
@@ -52,12 +51,10 @@ getAllCours(getToken);
 
 document.addEventListener("click", async (e) =>{
     if (e.target.classList.contains("update")) {
-        console.log(e.target.id);
         localStorage.setItem(key="updateArticleId", vlaue=e.target.id);
         location.href = "/pages/update.html";
     }
     if (e.target.classList.contains("delete")) {
-        console.log(e.target.id);
         
         const result = await fetch(`http://127.0.0.1:8000/admin/delete_article/${e.target.id}`, {
             method: "DELETE",

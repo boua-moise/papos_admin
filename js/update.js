@@ -21,12 +21,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     titre.value = article.titre;
     categorie.value = article.categorie;
     const contenu = JSON.parse(article.contenu);
-    console.log("contenu: ",contenu);
     
     await editor.render(contenu);
     displayPage();
   }
-  console.log(editor);
   
 });
 
@@ -73,7 +71,6 @@ document.querySelector('button').addEventListener("click", async (e)=>{
       "categorie": categorie.value
     }
 
-    console.log(data);
     
     const result = await fetch(`http://127.0.0.1:8000/admin/update_article/${id}`, {
         method: "PUT",

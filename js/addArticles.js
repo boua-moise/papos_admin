@@ -46,7 +46,6 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
         categorie: categorie,
         view: 0
     }
-    console.log(data, description);
     
     const result = await fetch("http://127.0.0.1:8000/admin/add_article", {
         method: "POST",
@@ -60,17 +59,11 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
     if (result.status == 200){
         localStorage.removeItem("updateArticleId");
         const dataReponse = await result.json();
-        console.log(dataReponse, parseInt(dataReponse.response));
         
         const fichier = inputFile.files[0]; // Le premier fichier sélectionné
-        console.log("Nom du fichier :", fichier.name);
-        console.log("Taille :", fichier.size);
-        console.log("Type :", fichier.type);
         const extiensionFile = fichier.name.split('.').pop().toLowerCase();
-        console.log(extiensionFile);
         const extiension = ["jpeg", "png", "jpg", "webp"];
         if (extiension.includes(extiensionFile)) {
-            console.log("ok");
             const cleanForm = new FormData()
             cleanForm.append("image", fichier);
             const resultImage = await fetch(`http://127.0.0.1:8000/admin/image_article/${parseInt(dataReponse.response)}`,{
@@ -78,7 +71,6 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
                 body: cleanForm
             });
             if (resultImage.status == 200){
-              console.log(resultImage);
               location.href = "/index.html";
             }
         }else{
