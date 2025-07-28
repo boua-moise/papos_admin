@@ -3,7 +3,7 @@ const token = sessionStorage.getItem("token");
 if (token) {
   displayPage();
 } else {
-  location.href = "/index.html";
+  location.href = "/papos_admin";
 }
 
 const editor = new EditorJS({ 
