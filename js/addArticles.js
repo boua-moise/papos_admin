@@ -3,7 +3,7 @@ const token = sessionStorage.getItem("token");
 if (token) {
   displayPage();
 } else {
-  location.href = "/";
+  location.href = "/index.html";
 }
 
 const editor = new EditorJS({ 
