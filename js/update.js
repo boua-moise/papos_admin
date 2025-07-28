@@ -77,7 +77,7 @@ document.querySelector('button').addEventListener("click", async (e)=>{
         body: JSON.stringify(data),
         headers: {
             "content-type": "application/json",
-            "Authorization": `Bearer `
+            "Authorization": `Bearer ${token}`
         }
     });
 
