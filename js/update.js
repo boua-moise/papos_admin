@@ -83,7 +83,7 @@ document.querySelector('button').addEventListener("click", async (e)=>{
 
     if (result.status == 200){
         localStorage.removeItem("updateArticleId");
-        location.href = "/index.html";
+        location.href = "/papos_admin/index.html";
     }
 });
 

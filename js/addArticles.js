@@ -74,7 +74,7 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
                 body: cleanForm
             });
             if (resultImage.status == 200){
-              location.href = "/index.html";
+              location.href = "/papos_admin/index.html";
             }
         }else{
             alert("Veuillez entrez une image svp");

@@ -52,7 +52,7 @@ getAllCours(getToken);
 document.addEventListener("click", async (e) =>{
     if (e.target.classList.contains("update")) {
         localStorage.setItem(key="updateArticleId", vlaue=e.target.id);
-        location.href = "/pages/update.html";
+        location.href = "/papos_admin/pages/update.html";
     }
     if (e.target.classList.contains("delete")) {
         
