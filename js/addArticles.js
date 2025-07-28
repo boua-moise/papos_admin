@@ -1,7 +1,10 @@
 const token = sessionStorage.getItem("token");
 
-
-displayPage();
+if (token) {
+  displayPage();
+} else {
+  location.href = "/";
+}
 
 const editor = new EditorJS({ 
   holder: 'editorjs', 
