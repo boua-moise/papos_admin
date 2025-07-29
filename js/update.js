@@ -69,7 +69,7 @@ document.querySelector('button').addEventListener("click", async (e)=>{
     const data = {
       "contenu": JSON.stringify(contenu),
       "titre": titre.value,
-      "description": description,
+      "description": description.value,
       "categorie": categorie.value
     }
 
