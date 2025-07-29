@@ -29,7 +29,7 @@ async function getAllCours(token) {
 
                     <div class="titre_info-article">
                         <h3 class="titre-article">${element.titre}</h3>
-                        <p class="info-article">${element.view}</p>
+                        <p class="info-article">${element.description}</p>
                     </div>
                     <div class="content-cta">
                         <div class="cta update" id="${element.id}">mise à jour</div>
