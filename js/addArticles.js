@@ -72,7 +72,10 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
             cleanForm.append("image", fichier);
             const resultImage = await fetch(`http://127.0.0.1:8000/admin/image_article/${parseInt(dataReponse.response)}`,{
                 method: "POST",
-                body: cleanForm
+                body: cleanForm,
+                headers:{
+                  "Authorization": `Bearer ${token}`
+                }
             });
             if (resultImage.status == 200){
               location.href = "/papos_admin/index.html";
