@@ -43,11 +43,12 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
     const description = document.getElementById("blog-description").value;
     const categorie = document.getElementById("category").value;
     const data = {
-        authorId: 1,
-        titre: titre,
-        contenu: JSON.stringify(contenu),
-        categorie: categorie,
-        view: 0
+        "authorId": 1,
+        "titre": titre,
+        "description": description,
+        "contenu": JSON.stringify(contenu),
+        "categorie": categorie,
+        "view": 0
     }
     
     const result = await fetch("http://127.0.0.1:8000/admin/add_article", {

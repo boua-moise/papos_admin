@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await result.json();
     const article = data.response;
     titre.value = article.titre;
+    description.value = article.description;
     categorie.value = article.categorie;
     const contenu = JSON.parse(article.contenu);
     
@@ -68,6 +69,7 @@ document.querySelector('button').addEventListener("click", async (e)=>{
     const data = {
       "contenu": JSON.stringify(contenu),
       "titre": titre.value,
+      "description": description,
       "categorie": categorie.value
     }
 
