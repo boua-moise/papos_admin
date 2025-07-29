@@ -9,7 +9,7 @@ form.addEventListener("submit", async (e) =>{
     displayPage2();
     const data = JSON.stringify(Object.fromEntries(new FormData(e.target)));
 
-    const result = await fetch("http://127.0.0.1:8000/auth/login", {
+    const result = await fetch("https://papos-backend.onrender.com/auth/login", {
         method: "POST",
         body: data,
         headers: {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
     const token = sessionStorage.getItem("token");
     
     if (token) {
-        const result = await fetch("http://127.0.0.1:8000/auth/currentuser", {
+        const result = await fetch("https://papos-backend.onrender.com/auth/currentuser", {
             method: "GET",
             headers: {
                 "content-type": "application/json",

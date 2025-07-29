@@ -1,7 +1,7 @@
 const getToken = sessionStorage.getItem("token");
 
 async function getAllCours(token) {
-    const result = await fetch("http://127.0.0.1:8000/admin/liste_article", {
+    const result = await fetch("https://papos-backend.onrender.com/admin/liste_article", {
         method: "GET",
         headers:{
             "content-type": "application/json",
@@ -56,7 +56,7 @@ document.addEventListener("click", async (e) =>{
     }
     if (e.target.classList.contains("delete")) {
         
-        const result = await fetch(`http://127.0.0.1:8000/admin/delete_article/${e.target.id}`, {
+        const result = await fetch(`https://papos-backend.onrender.com/admin/delete_article/${e.target.id}`, {
             method: "DELETE",
             headers:{
                 "content-type": "application/json",

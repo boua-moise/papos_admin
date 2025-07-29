@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const categorie = document.getElementById("category");
   const id = localStorage.getItem("updateArticleId");
 
-  const result = await fetch(`http://127.0.0.1:8000/articles/${id}/contenu`, {
+  const result = await fetch(`https://papos-backend.onrender.com/articles/${id}/contenu`, {
     method: "GET",
     headers:{
       "content-type": "application/json"
@@ -47,7 +47,7 @@ const editor = new EditorJS({
       class: ImageTool,
       config: {
         endpoints: {
-          byFile: 'http://127.0.0.1:8000/articles/uploadFile', // Your backend file uploader endpoint
+          byFile: 'https://papos-backend.onrender.com/articles/uploadFile', // Your backend file uploader endpoint
           byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
         }
       }
@@ -74,7 +74,7 @@ document.querySelector('button').addEventListener("click", async (e)=>{
     }
 
     
-    const result = await fetch(`http://127.0.0.1:8000/admin/update_article/${id}`, {
+    const result = await fetch(`https://papos-backend.onrender.com/admin/update_article/${id}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: {

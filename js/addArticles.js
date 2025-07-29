@@ -21,7 +21,7 @@ const editor = new EditorJS({
       class: ImageTool,
       config: {
         endpoints: {
-          byFile: 'http://127.0.0.1:8000/articles/uploadFile', // Your backend file uploader endpoint
+          byFile: 'https://papos-backend.onrender.com/articles/uploadFile', // Your backend file uploader endpoint
           byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
         }
       }
@@ -51,7 +51,7 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
         "view": 0
     }
     
-    const result = await fetch("http://127.0.0.1:8000/admin/add_article", {
+    const result = await fetch("https://papos-backend.onrender.com/admin/add_article", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -70,7 +70,7 @@ document.querySelector('form').addEventListener("submit", async (e)=>{
         if (extiension.includes(extiensionFile)) {
             const cleanForm = new FormData()
             cleanForm.append("image", fichier);
-            const resultImage = await fetch(`http://127.0.0.1:8000/admin/image_article/${parseInt(dataReponse.response)}`,{
+            const resultImage = await fetch(`https://papos-backend.onrender.com/admin/image_article/${parseInt(dataReponse.response)}`,{
                 method: "POST",
                 body: cleanForm,
                 headers:{
