@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
     const token = sessionStorage.getItem("token");
     
     if (token) {
+        displayPage2();
         const result = await fetch("https://papos-backend.onrender.com/auth/currentuser", {
             method: "GET",
             headers: {
